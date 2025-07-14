@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Josephat Kiogora | Carcoon Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #0d0d0d; color: #ffffff; line-height: 1.6; scroll-behavior: smooth; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; position: sticky; top: 0; background: #0d0d0d; z-index: 999;
+    }
+    .logo { height: 40px; }
+    nav ul {
+      list-style: none; display: flex; gap: 1.5rem;
+    }
+    nav ul li a {
+      color: #ffffff; text-decoration: none; transition: color 0.3s ease;
+    }
+    nav ul li a:hover { color: #00ff99; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1617350848284-8a4dffb7fc06?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; flex-direction: column; padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem; margin-bottom: 1rem; animation: fadeIn 2s ease-in-out forwards;
+    }
+    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .btn {
+      background-color: #00ff99; border: none; padding: 0.75rem 2rem;
+      color: #000; font-weight: bold; border-radius: 30px; cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover { background-color: #00cc7a; }
+    section { padding: 4rem 2rem; }
+    .services, .contact {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;
+    }
+    .card {
+      background-color: #1a1a1a; padding: 2rem; border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 153, 0.1); transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-10px); }
+    footer {
+      text-align: center; padding: 2rem; background-color: #111; color: #888;
+    }
+    .whatsapp {
+      position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+    }
+    .whatsapp img { height: 50px; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <img src="https://i.imgur.com/ZqLJRYj.png" alt="Carcoon Technologies Logo" class="logo" />
+  </header>
+
+  <section class="hero">
+    <h1 id="animated-text">Professional Driver</h1>
+    <p>Founder of Carcoon Technologies</p>
+    <a href="#contact" class="btn">Let’s Work Together</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Josephat Kiogora — founder of Carcoon Technologies. I specialize in driving, automotive engineering, web design, and data analysis. I bring precision and passion to both technical and creative fields.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="card">🚗 Professional Driving</div>
+      <div class="card">🔧 Automotive Engineering</div>
+      <div class="card">💻 Web Design & Development</div>
+      <div class="card">📊 Data Analysis & Reporting</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <div>
+        <p><strong>Phone:</strong> 0741182275</p>
+        <p><strong>Email:</strong> josephatthinguri@gmail.com</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/254741182275" target="_blank">Chat on WhatsApp</a></p>
+      </div>
+      <form>
+        <input type="text" placeholder="Your Name" required /><br><br>
+        <input type="email" placeholder="Your Email" required /><br><br>
+        <textarea placeholder="Your Message" rows="5" required></textarea><br><br>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Carcoon Technologies – All Rights Reserved.
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/254741182275" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <script>
+    const words = ["Professional Driver", "Automotive Engineer", "Web Designer", "Data Analyst"];
+    let i = 0;
+    const textElement = document.getElementById("animated-text");
+
+    setInterval(() => {
+      i = (i + 1) % words.length;
+      textElement.style.opacity = 0;
+      setTimeout(() => {
+        textElement.textContent = words[i];
+        textElement.style.opacity = 1;
+      }, 400);
+    }, 3000);
+  </script>
+</body>
+</html>
