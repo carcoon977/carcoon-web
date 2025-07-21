@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carcoon Digital Services</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#summary">Summary</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+  </div>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/2547411182275" target="_blank" title="Chat on WhatsApp">💬</a>
+  </div>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Carcoon Digital Services</h1>
+      <p class="typing-text" id="typing"></p>
+      <div class="photo-placeholder">[Add your image here]</div>
+      <p class="progress-text">Making progress daily in digital solutions and creative services.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I’m Carcoon, a passionate multitasker who enjoys solving problems behind the scenes. Whether it's analyzing data, designing modern websites, or providing transport support, I focus on reliability and excellence.</p>
+  </section>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>Founder of Carcoon Digital Services. I help small businesses and individuals grow through tech-powered services, content creation, and virtual coordination. Full-time available and highly dependable.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:carcoonke@gmail.com">carcoonke@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/2547411182275" target="_blank">Click to Chat</a></p>
+  </section>
+
+  <section id="location">
+    <h2>Location</h2>
+    <p>Based in Kenya – Available for remote work globally.</p>
+  </section>
+
+  <script>
+    const texts = ["Data Analyst", "Web Designer", "Professional Driver"];
+    let count = 0, index = 0, currentText = "", letter = "";
+    (function type(){
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.getElementById('typing').textContent = letter;
+      if(letter.length === currentText.length){
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+      } else {
+        setTimeout(type, 100);
+      }
+    })();
+  </script>
+</body>
+</html>

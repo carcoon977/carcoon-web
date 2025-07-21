@@ -1,0 +1,115 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  scroll-behavior: smooth;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 100%;
+  background-color: #1e1e1e;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.sidebar a {
+  padding: 12px;
+  text-decoration: none;
+  color: #25D366;
+  display: block;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  background-color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  margin-left: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+}
+
+.typing-text {
+  font-size: 1.5em;
+  color: #25D366;
+  min-height: 1.5em;
+}
+
+.photo-placeholder {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.progress-text {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin-left: 180px;
+}
+
+h2 {
+  color: #25D366;
+}
+
+a {
+  color: #25D366;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 50px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float a {
+  color: white;
+  display: block;
+}
