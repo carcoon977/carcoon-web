@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carcoon Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      CARCOON TECHNOLOGIES<br>
+      <small>SLOGAN HERE</small>
+    </div>
+    <nav class="nav-links">
+      <a href="#" onclick="showSection('hero')">Home</a>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('summary')">Summary</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+      <i class="fas fa-ellipsis-v" style="color:white; margin-left: 20px;"></i>
+    </nav>
+  </header>
+
+  <section class="hero section" id="hero">
+    <h1>Cheap. Fast. Better.</h1>
+    <p>I am a <span id="animated-profession">Data Entry Specialist</span></p>
+    <button onclick="showSection('contact')">Contact Us</button>
+  </section>
+
+  <section class="section" id="about" style="padding: 60px 40px; display: none;">
+    <h2>About Us</h2>
+    <p>
+      I am Carcoon, founder of Carcoon Digital Services. I provide top-notch virtual assistance, data entry,
+      and transcription services that are fast, affordable, and accurate. Whether you're a business or
+      an individual, my goal is to make your digital life easier by handling the tasks you don't have time for.
+    </p>
+  </section>
+
+  <section class="section" id="summary" style="padding: 60px 40px; display: none;">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Accurate and fast data entry for spreadsheets, CRMs, and forms</li>
+      <li>Transcription of audio and video files into clean, readable text</li>
+      <li>Virtual assistance for scheduling, research, email management, and more</li>
+      <li>Guaranteed confidentiality and timely delivery</li>
+    </ul>
+    <h3>Education</h3>
+    <p>I studied at <strong>Dedan Kimathi University</strong>, where I sharpened my skills in technology, communication, and attention to detail.</p>
+  </section>
+
+  <section class="section" id="contact" style="padding: 60px 40px; display: none;">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:carcoonke@gmail.com" style="color: lightblue;">carcoonke@gmail.com</a></p>
+    <p>Phone/WhatsApp: +254 712 345 678</p>
+    <p>Location: Nairobi, Kenya (Serving clients globally)</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST" style="margin-top: 30px;">
+      <label for="name">Name:</label><br>
+      <input type="text" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea name="message" rows="5" required></textarea><br><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    const professions = ['Data Entry Specialist', 'Transcription Expert', 'Virtual Assistant'];
+    let current = 0;
+
+    function cycleProfession() {
+      document.getElementById('animated-profession').textContent = professions[current];
+      current = (current + 1) % professions.length;
+    }
+    setInterval(cycleProfession, 2000);
+
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
