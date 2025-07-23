@@ -1,0 +1,71 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+nav {
+  background: #111;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 20px;
+  color: #fff;
+}
+
+nav .menu {
+  display: flex;
+  gap: 15px;
+}
+
+nav .menu a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hero .animated-text {
+  font-weight: bold;
+  color: #0ff;
+  font-size: 20px;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.section {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.section.active {
+  display: block;
+}
+
+.wave {
+  width: 100%;
+  height: 150px;
+  background: url('https://svgshare.com/i/uLq.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
