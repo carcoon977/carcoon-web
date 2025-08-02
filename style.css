@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #111;
+}
+.logo {
+    font-size: 1.5em;
+}
+.menu i {
+    font-size: 1.5em;
+    color: #fff;
+}
+.home {
+    text-align: center;
+    padding: 100px 20px;
+}
+.whatsapp-btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+    background: #25D366;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+section {
+    padding: 60px 20px;
+    border-top: 1px solid #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+form button {
+    padding: 10px;
+    background: #25D366;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
